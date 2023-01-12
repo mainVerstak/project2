@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/nice-select2.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -1727,13 +1728,13 @@
                           <span class="cart-item__old-price">
                             40 508,75 $
                           </span>
-                          <span class="discount-tag discount-tag_small cart-item__discount">
+                          <span class="discount-tag discount-tag_cart cart-item__discount">
                             -20%
                           </span>
                         </div>
                         <div class="cart-item__bottom">
                           <div class="cart-item__counter-row">
-                            <div class="counter cart-item__counter js-counter">
+                            <div class="counter counter_cart-item cart-item__counter js-counter">
                               <div class="counter__btn counter__btn_dec js-counter-dec"></div>
                               <input type="text" class="counter__input js-counter-input" value="1" min="1" max="999">
                               <div class="counter__btn counter__btn_inc js-counter-inc"></div>
@@ -1798,13 +1799,13 @@
                           <span class="cart-item__old-price">
                             40 508,75 $
                           </span>
-                          <span class="discount-tag discount-tag_small cart-item__discount">
+                          <span class="discount-tag discount-tag_cart cart-item__discount">
                             -20%
                           </span>
                         </div>
                         <div class="cart-item__bottom">
                           <div class="cart-item__counter-row">
-                            <div class="counter cart-item__counter js-counter">
+                            <div class="counter counter_cart-item cart-item__counter js-counter">
                               <div class="counter__btn counter__btn_dec js-counter-dec"></div>
                               <input type="text" class="counter__input js-counter-input" value="1" min="1" max="999">
                               <div class="counter__btn counter__btn_inc js-counter-inc"></div>
@@ -1869,13 +1870,13 @@
                           <span class="cart-item__old-price">
                             40 508,75 $
                           </span>
-                          <span class="discount-tag discount-tag_small cart-item__discount">
+                          <span class="discount-tag discount-tag_cart cart-item__discount">
                             -20%
                           </span>
                         </div>
                         <div class="cart-item__bottom">
                           <div class="cart-item__counter-row">
-                            <div class="counter cart-item__counter js-counter">
+                            <div class="counter counter_cart-item cart-item__counter js-counter">
                               <div class="counter__btn counter__btn_dec js-counter-dec"></div>
                               <input type="text" class="counter__input js-counter-input" value="1" min="1" max="999">
                               <div class="counter__btn counter__btn_inc js-counter-inc"></div>
@@ -1910,36 +1911,53 @@
 
     <main class="main">
       <div class="container">
-        <div class="section section_mt_64 section_mb_64 section-hero">
+        <div class="section section_mt_first section_mb_64 section-hero">
           <div class="swiper swiper-hero section-hero__slider">
             <div class="swiper-wrapper">
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr1.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr1-mobile.png">
+                  <img data-src="images/bnnr1.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr2.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr2-mobile.png">
+                  <img data-src="images/bnnr2.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr1.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr1-mobile.png">
+                  <img data-src="images/bnnr1.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr1.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr2-mobile.png">
+                  <img data-src="images/bnnr2.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr2.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr1-mobile.png">
+                  <img data-src="images/bnnr1.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
               <a href="#" class="swiper-slide">
-                <img data-src="images/bnnr1.png" class="swiper-lazy" />
+                <picture>
+                  <source media="(max-width: 767px)" data-srcset="images/bnnr2-mobile.png">
+                  <img data-src="images/bnnr2.png" class="swiper-lazy" alt="">
+                </picture>
                 <div class="swiper-lazy-preloader"></div>
               </a>
             </div>
             <div class="swiper-pagination swiper-pagination-style"></div>
-
             <div class="swiper-button-prev swiper-button-style">
               <svg width="24" height="24">
                 <use href="images/svg-icons.svg#icon-arrow-left"></use>
@@ -3151,6 +3169,7 @@
 </div>
   </div>
 
+  <script src="js/nice-select2.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
