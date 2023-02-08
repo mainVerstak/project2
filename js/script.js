@@ -371,13 +371,13 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   //-breadcrumb
 
-  //+scroll top (product)
-  document.querySelectorAll('.product-details__head-top').forEach(function (item) {
+  //+hide product description top (product)
+  document.querySelectorAll('.product-details__head-show').forEach(function (item) {
     item.addEventListener('click', function () {
-      doScrolling(0, 0.1);
+      this.closest('.product-details__item').classList.toggle('_hide-drop');
     })
   })
-  //-scroll top 
+  //-hide product description top (product)
 
   //+popup comparison 
   const compareBtns = document.querySelectorAll('.js-popup-comparison');
@@ -415,14 +415,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
   //-comparison drop
-  //+comparison scroll top
-  document.querySelectorAll('.comparison-table__head-top').forEach(function (item) {
-    item.addEventListener('click', function () {
-      let offset = this.closest('.comparison-table').getBoundingClientRect().top + window.scrollY;
-      doScrolling((offset - 80), 0.1);
-    })
-  })
-  //-comparison scroll
   //+comparison table
   document.querySelectorAll('.swiper-comparison-slider').forEach(function (container, index) {
     let slideCount = container.querySelectorAll('.comparison-slide').length;
@@ -1168,7 +1160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   })
 
-  const swiperHero = new Swiper('.swiper-hero', {
+  const swiperHero = new Swiper('.swiper-hero__slider', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 15,
@@ -1177,7 +1169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-hero-pagination',
       type: 'bullets',
       dynamicBullets: true,
       dynamicMainBullets: 2
